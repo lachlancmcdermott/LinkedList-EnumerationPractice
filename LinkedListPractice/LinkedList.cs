@@ -118,7 +118,6 @@ namespace LinkedListPractice
                 current.next = current.next.next;
                 return true;
             }
-            return false;
         }
 
         public void clear()

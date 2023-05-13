@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace LinkedListPractice
 {
@@ -13,18 +14,10 @@ namespace LinkedListPractice
             list.AddFirst(2);
             list.AddLast(5);
 
-            Print(list);
-        }
-
-        static void Print(DoublyLinkedList<int> list)
-        {
-            DoublyNode<int> current = list.Head;
-            while (current != list.Tail)
+            foreach (var t in list)
             {
-                Console.WriteLine(current.Value);
-                current = current.Next;
+                Console.WriteLine(t); 
             }
-            Console.WriteLine(list.Tail.Value);
         }
     }
 }
