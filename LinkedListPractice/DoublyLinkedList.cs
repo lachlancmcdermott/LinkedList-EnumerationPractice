@@ -23,17 +23,24 @@ namespace LinkedListPractice
             public T Current {get; private set; }
             public Enumerator(DoublyLinkedList<T> myList)
             {
-                Current = myList.Head.Value;
+                Current = default;
                 myLinkedList = myList;
-                curr = myLinkedList.Head.Previous;
+                curr = null;
                 hasHeadBeenReached = 0;
             }
 
             object IEnumerator.Current => Current;
             public bool MoveNext()
             {
+                if(curr == null)
+                {
+                    curr = myLinkedList.Head.Previous;
+                }
+                else if (curr != null)
+                {
+                    curr = curr.Next;
+                }
                 Current = curr.Next.Value;
-                curr = curr.Next;
                 if (curr == myLinkedList.Head)
                 {
                     hasHeadBeenReached++;
@@ -115,5 +122,5 @@ namespace LinkedListPractice
             }
             current.Next = insert;
         }
-    }
+    } 
 }
