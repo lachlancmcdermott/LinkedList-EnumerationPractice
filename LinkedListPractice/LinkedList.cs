@@ -31,7 +31,6 @@ namespace LinkedListPractice
                 head = nodeToInsert;
             }
         }
-
         public void AddLast(T value)
         {
             if (head == null)
@@ -49,7 +48,6 @@ namespace LinkedListPractice
                 current.next = nodeToInsert;
             }
         }
-
         public void AddBefore(Node<T> node, T value)
         {
             if(node == head)
@@ -68,14 +66,12 @@ namespace LinkedListPractice
             }
             current.next = nodeToInsert;
         }
-
         public void AddAfter(Node<T> node, T value)
         {
             Node<T> nodeToInsert = new Node<T>(value);
             nodeToInsert.next = node.next;
             node.next = nodeToInsert;
         }
-
         public bool RemoveFirst()
         {
             if (head == null) return false;
@@ -85,7 +81,6 @@ namespace LinkedListPractice
                 return true;
             }
         }
-
         public bool RemoveLast()
         {
             if (head == null) return false;
@@ -100,7 +95,6 @@ namespace LinkedListPractice
                 return true;
             }
         }
-
         public bool Remove(T value)
         {
             Node<T> current = head;
@@ -119,16 +113,13 @@ namespace LinkedListPractice
                 return true;
             }
         }
-
         public void clear()
         {
 
         }
-
         public bool Contains(T value)
         {
             return true;
         }
-
     }
 }

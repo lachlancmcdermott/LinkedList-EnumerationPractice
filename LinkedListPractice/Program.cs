@@ -12,7 +12,9 @@ namespace LinkedListPractice
             list.AddFirst(0);
             list.AddFirst(1);
             list.AddFirst(2);
-            list.AddLast(5);
+            list.AddFirst(3);
+            list.AddFirst(4);
+            list.AddFirst(5);
 
             foreach (var t in list)
             {
